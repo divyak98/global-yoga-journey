@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,900&family=Montserrat+Alternates:wght@300;400;500;800&family=Nunito+Sans:ital,opsz@1,6..12&family=Ubuntu:ital,wght@1,500;1,700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+ box-sizing: border-box;
+ font-family: 'Nunito Sans', sans-serif;
+}
+
+:root {
+  --primaryColor: #3ab3a7;
+  --primaryHover: #0c988a;
+  --secondaryColor: #059789;
+  --secHoverColor: #253b53;
+  --greyColor: #f7f7f7;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style:none;
+}
+
+span{
+  display: block;
+  font-weight: 700;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+.grid{
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+}
+
+input{
+  background-color: #c3fff95f;
+  padding: 1.3rem;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 3px;
+  width: 100%;
+  border-radius: 5px;
+  &::placeholder{
+    color: white;
+    font-size: 12px;
+  }
+}
+.spanText{
+  font-size: 30px;
+  color: var(--secHoverColor);
+}
+
+p{
+  font-size: 15px;
+  opacity: .7;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.secTitle{
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--primaryColor);
+}
+
+.section{
+  padding: 4 ream 0;
+}
+
+.container{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+img{
+  height: auto;
+  width: 100%;
+}
+
+.icon{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn{
+  padding: 0.5rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  justify-content: center;
+  width: max-content;
+  font-weight: 600;
+  position: relative;
+  color: var(--primaryColor);
+  background: transparent;
+  border-radius: 5px;
+  &:hover{
+    background-color: var(--primaryColor);
+    color: var(--secHoverColor);
+  }
+}
+@media screen and (min-width:1240px) {
+  .container{
+    width: 75%;
+    margin: auto;
+  }
+  .section{
+    padding: 6rem 0 4rem;
+  }
+  .secTitle{
+    font-size: 40px;
+    color: var(--secHoverColor);
+    padding-bottom: 2rem;
+  }
+  .spanText{
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+}
