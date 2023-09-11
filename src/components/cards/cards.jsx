@@ -1,6 +1,5 @@
 import React,  {useEffect} from 'react'
 import './cards.css';
-
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import yoga from '../Assets/yoga.jpg';
@@ -11,12 +10,12 @@ import {AiOutlineArrowRight}  from 'react-icons/ai'
 const Cards = () => {
   
   useEffect(()=>{
-    Aos.init({duration:500})
+    Aos.init({duration:0})
 },[])
 
   return (
     <div className='cards'>
-      <div data-aos='fade-up' data-aos-duration='1000' className='cardContainer container grid'>
+      <div data-aos='fade-up' data-aos-duration='-100' className='cardContainer container grid'>
         <div className='singleCard'>
           <div className='imgDiv'>
             <img src={yoga}/>
