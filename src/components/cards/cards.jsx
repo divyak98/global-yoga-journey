@@ -15,7 +15,7 @@ const Cards = () => {
 
   return (
     <div className='cards'>
-      <div data-aos='fade-up' data-aos-duration='-100' className='cardContainer container grid'>
+      <div data-aos='fade-up' data-aos-duration='20' className='cardContainer container grid'>
         <div className='singleCard'>
           <div className='imgDiv'>
             <img src={yoga}/>
