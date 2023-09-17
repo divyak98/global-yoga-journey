@@ -1,119 +1,125 @@
 /*# sourceMappingURL=pacakages.css.map */
 :root {
-    --primaryColor: #3ab3a7;
-    --primaryHover: #0c988a;
-    --secondaryColor: #059789;
-    --secHoverColor: #253b53;
-    --greyColor: #f7f7f7;
-  }
+  --primaryColor: #3ab3a7;
+  --primaryHover: #0c988a;
+  --secondaryColor: #059789;
+  --secHoverColor: #253b53;
+  --greyColor: #f7f7f7;
+}
 
 .packages{
-  .secContainer{
-     margin-top: -11rem;
-    .packageContainer{
-      display: grid;
+.secContainer{
+  margin-top: -55px;
+  .packageContainer{
+    display: grid;
+    
+    .single{
+      width:100%;
+      position: relative;
+      border: 1px solid var(--greyColor);
+      padding-bottom: 1rem;
+      border-radius: 10px;
+      overflow: hidden;
+      align-items: center;
+      justify-content: center;
+      transition: .4s ease;
+      border: 3px solid black;
+      gap: .5rem;
+      border-radius: 15px;
+      padding: 10px;
+      margin: 10px;
       
-      .single{
-        width:100%;
-        position: relative;
-        border: 1px solid var(--greyColor);
-        padding-bottom: 1rem;
-        border-radius: 10px;
-        overflow: hidden;
-        align-items: center;
-        justify-content: center;
-        transition: .4s ease;
-        border: 3px solid black;
-        gap: .5rem;
-        border-radius: 15px;
-        padding: 10px;
-        margin: 10px;
-        
-       
-        .packageTitle{
-          font-size: 15px;
-          color: var(--primaryColor);
-          font-weight: 600;
-          
-        }
-   
-        .stars-Review{
-          align-items: center;
-          gap: .5rem;
-          padding: 1rem 0;
-
-          .stars{
-            color: rgb(245,176,79);
-
-            .icon{
-              font-size: 14px;
-            }
-          }
-          .custReview{
-            font-size: 13px;
-            transform: translateY(-2px);
-          }
-        }
-        }
-        p{
-          padding-bottom:1rem ;
-
-        }
-        .btn{
-          color: var(--primaryColor);
-          font-size: 14px;
-          border: 2px solid var(--primaryColor);
-          transition: .3s ease;
-          width: max-content;
-
-          &:hover{
-            background-color: white;
-            color: var(--primaryColor);
-          }
-        }
-       
-        }
-        
-      
-      .price{
-        position: absolute;
-        padding: 10px;
-        background: var(--primaryColor);
-        top: 0;
-        right: 0;
-        color: white;
+     
+      .packageTitle{
         font-size: 15px;
-        font-weight: 800;
-      }
-    }
-    }
-  
-@media screen and (min-width:700) {
-  .packages{
-    .secContainer{
-      .packageContainer{
+        color: var(--primaryColor);
+        font-weight: 600;
         
-          grid-template-columns:repeat(2,1fr);
-          padding-bottom: 1rem;
-          gap: 1rem;
-          margin: auto;
-          
       }
+ 
+      .stars-Review{
+        align-items: center;
+        gap: .5rem;
+        padding: 1rem 0;
+
+        .stars{
+          color: rgb(245,176,79);
+
+          .icon{
+            font-size: 14px;
+          }
+        }
+        .custReview{
+          font-size: 13px;
+          transform: translateY(-2px);
+        }
+      }
+      }
+      p{
+        padding-bottom:1rem ;
+
+      }
+      .btn{
+        color: var(--primaryColor);
+        font-size: 14px;
+        border: 2px solid var(--primaryColor);
+        transition: .3s ease;
+        width: max-content;
+
+        &:hover{
+          background-color: white;
+          color: var(--primaryColor);
+        }
+      }
+     
+      }
+      
+    
+    .price{
+      position: absolute;
+      padding: 10px;
+      background: var(--primaryColor);
+      top: 0;
+      right: 0;
+      color: white;
+      font-size: 15px;
+      font-weight: 800;
+    }
+  }
+  }
+
+@media screen and (min-width:700) {
+.packages{
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  .secContainer{
+    
+  margin-top: -130px;
+    .packageContainer{
+      
+        grid-template-columns:repeat(2,1fr);
+        gap: 1rem;
+        margin: auto;
+        
     }
   }
 }
+}
 @media screen and (min-width:1240px) {
-  .packages{
-    .secContainer{
-      .packageContainer{
-        
-          grid-template-columns:repeat(3,1fr);
-          padding-bottom: 1rem ;
-          gap: 1rem;
-        
-          }
+.packages{
+  width:100%;
+  .secContainer{
     
-      }
-    }
+  margin-top: -130px;
+    .packageContainer{
+        grid-template-columns:repeat(3,1fr);
+        padding-bottom: 1rem ;
+        gap: 1rem;
+      
+        }
   
+    }
+  }
+
 }
