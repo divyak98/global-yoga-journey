@@ -1,90 +1,90 @@
 /*# sourceMappingURL=staff.css.map */
 :root {
-  --primaryColor: #3ab3a7;
-  --primaryHover: #0c988a;
-  --secondaryColor: #059789;
-  --secHoverColor: #253b53;
-  --greyColor: #f7f7f7;
-}
-.staff{
-display: grid;
-align-items: center;
-justify-content: center;
-margin: auto;
-background: var(--greyColor);
-z-index: 5000;
-
-.staffContainer{
-  .singleCard{
-    transform: translateY(-50px);
-    height: 250px;
-    width: 100%;
-    transition: .5s;
-    position: relative;
-
-    &::after{
-      content: '';
-      position: absolute;
-      z-index: 2;
-      height: 100%;
+    --primaryColor: #3ab3a7;
+    --primaryHover: #0c988a;
+    --secondaryColor: #059789;
+    --secHoverColor: #253b53;
+    --greyColor: #f7f7f7;
+  }
+  .staff{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background: var(--greyColor);
+  z-index: 5000;
+  
+  .staffContainer{
+    .singleCard{
+      transform: translateY(-50px);
+      height: 250px;
       width: 100%;
-      bottom: 0;
-      background: linear-gradient(rgba(0,0,1,0.42), rgba(0,0,1,0.549));
-      border-radius: 10px;
-    }
-    .imgDiv{
-      height: 100%;
-      border-radius: 10px;
-      overflow: hidden;
-
-      img{
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          border-radius: 10px;
+      transition: .5s;
+      position: relative;
+  
+      &::after{
+        content: '';
+        position: absolute;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        background: linear-gradient(rgba(0,0,1,0.42), rgba(0,0,1,0.549));
+        border-radius: 10px;
+      }
+      .imgDiv{
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+  
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+      }
+      .textDiv{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        color: white;
+        z-index: 5;
       }
     }
-    .textDiv{
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translate(-50%);
-      color: white;
-      z-index: 5;
+  }
+  .spanText{
+    text-align: center;
+    transform: translateY(-50px);
+    padding: 1.5rem;
+    margin: auto;
+    gap: .5rem;
+  
+    &:hover{
+      font-weight: 600;
+      .icon{
+        transition: 0.4s;
+        transform: translate(10px);
+      }
     }
   }
-}
-.spanText{
-  text-align: center;
-  transform: translateY(-50px);
-  padding: 1.5rem;
-  margin: auto;
-  gap: .5rem;
-
-  &:hover{
-    font-weight: 600;
-    .icon{
-      transition: 0.4s;
-      transform: translate(10px);
+  }
+  
+  @media screen and (min-width:700px) {
+    .staff{
+      .staffContainer{
+        width: 100%;
+      grid-template-columns: repeat(2,1fr);
+      }
     }
   }
-}
-}
-
-@media screen and (min-width:700px) {
-  .staff{
-    .staffContainer{
+  
+  @media screen and (min-width:1240px ) {
+    .staff{
+     .staffContainer{
       width: 100%;
-    grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(4,1fr);
+      }
     }
   }
-}
-
-@media screen and (min-width:1240px ) {
-  .staff{
-   .staffContainer{
-    width: 100%;
-    grid-template-columns: repeat(4,1fr);
-    }
-  }
-}
