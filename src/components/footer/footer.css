@@ -1,158 +1,90 @@
-/*# sourceMappingURL=footer.css.map */
+/*# sourceMappingURL=staff.css.map */
 :root {
     --primaryColor: #3ab3a7;
     --primaryHover: #0c988a;
+    --secondaryColor: #059789;
     --secHoverColor: #253b53;
     --greyColor: #f7f7f7;
-  } 
-.footer{
-  background: var(--primaryHover);
-
-  .secContainer{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+  }
+  .staff{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background: var(--greyColor);
+  z-index: 5000;
   
-    .content{
-      gap: 1rem;
-      padding: 2.5rem 0;
-
-      .row{
+  .staffContainer{
+    .singleCard{
+      transform: translateY(-50px);
+      height: 250px;
+      width: 100%;
+      transition: .5s;
+      position: relative;
+  
+      &::after{
+        content: '';
+        position: absolute;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        background: linear-gradient(rgba(0,0,1,0.42), rgba(0,0,1,0.549));
+        border-radius: 10px;
+      }
+      .imgDiv{
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+  
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+      }
+      .textDiv{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%);
         color: white;
-
-        .spanText{
-          font-weight: 800;
-          color: var(--secHoverColor);
-          padding: 1rem 0;
-        }
-        .contactDiv{
-            display: grid;
-            gap: .5rem;
-        }
-        .flex{
-          gap: .5rem;
-          .icon{
-            font-size: 15px;
-            color: var(--secHoverColor);
-          }
-          span{
-            font-size: 15px;
-            color: white;
-          }
-        }
-        .singleNews{
-          margin-bottom: 1rem;
-
-          .text{
-            font-size: 14px;
-          }
-          p{
-            padding-top:.4rem ;
-          }
-        }
-        
-       
-      }
-    }
-    .bottomDiv{
-      padding: 1rem;
-      flex-direction: column;
-      text-align: center;
-      justify-content: center;
-      gap: 1rem;
-      background: rgb(188, 174, 174);
-      color: var(--secHoverColor);
-      border-radius: 10px;
-      margin-bottom: 1rem;
-
-      .social{
-        gap: .5rem;
-        align-items: center;
-        justify-content: center;
-        .icon{
-          font-size: 18px;
-          cursor: pointer;
-
-          &:hover{
-            color: white;
-          }
-        }
+        z-index: 5;
       }
     }
   }
-}
-
-@media screen and (min-width:574px) {
-  .footer{
-    .secContainer{
-      .content{
-        grid-template-columns: repeat(2,1fr);
-        align-items: start;
-        justify-content: center;
-
-        .row{
-          margin: 0 auto;
-          .spanText{
-            font-size: 14px;
-          }
-          .contactDiv{
-            display: grid;
-            gap: 1rem;
-          }
-          .flex{
-            gap: 1rem;
-            .icon{
-              font-size: 14px;
-            }
-            span{
-              font-size: 14px;
-            }
-          }
-          .singleNews{
-            .text{
-              font: 14px;
-            }
-            p{
-              padding-top: 1rem;
-            }
-          }
-          .bottomDiv{
-            flex-direction: row;
-          }
-        }
-        
-      }
-    }
-  }
-}
-
-@media screen and (min-width:1024px) {
-  .footer{
-    .secContainer{
-      .content{
-        .row{
-          .spanText{
-            font-size: 30px;
-          }
-          .flex{
-            .icon{
-              font-size: 18px;
-            }
-            span{
-              font-size: 16px;
-            }
-          }
-          .singleNews{
-            .text{
-              font: 16px;
-            }
-           
-          
-        }
-        
+  .spanText{
+    text-align: center;
+    transform: translateY(-50px);
+    padding: 1.5rem;
+    margin: auto;
+    gap: .5rem;
+  
+    &:hover{
+      font-weight: 600;
+      .icon{
+        transition: 0.4s;
+        transform: translate(10px);
       }
     }
   }
   }
-}
+  
+  @media screen and (min-width:700px) {
+    .staff{
+      .staffContainer{
+        width: 100%;
+      grid-template-columns: repeat(2,1fr);
+      }
+    }
+  }
+  
+  @media screen and (min-width:1240px ) {
+    .staff{
+     .staffContainer{
+      width: 100%;
+      grid-template-columns: repeat(4,1fr);
+      }
+    }
+  }
